@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/shared.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/main.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="page-container">
+	<header class="main-header">
+		<div>
+			<a href="/HappyHomes/index/" class="main-header_brand">HAPPYHOMES</a>
+		</div><nav class="main-nav">
+			<ul class="main-nav_items ">
+				<li class="main-nav_item">
+					<a href="/HappyHomes/pg_hostel_showall/">PG/Hostel</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/contact_us/">Contact Us</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/profile/?email={{ request.session.email }}">My Profile<i class="fa fa-user fa-fw"></i></a>
+				</li>
+				<li class="main-nav_item main-nav_item--login">
+					<a href="#">Logout</a>					
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="city">
+		</div>
+		<div class="container">
+			<section class="heading">
+				<h1>Contact Us</h1>
+			</section>
+			<div class="contact-us_container">
+				<div>
+					<label class="label">Name: </label>
+				</div>
+				<div>
+					<label class="label">HappyHome PG and Hostel Facility</label>
+				</div>
+				<div>
+					<label class="label">City:</label>
+				</div>
+				<div>
+					<label class="label">Ahmedabad</label>
+				</div>
+				<div>
+					<label class="label">State:</label>
+				</div>
+				<div>
+					<label class="label">Gujarat</label>
+				</div>
+				<div>
+					<label class="label">Email:</label>
+				</div>
+				<div>
+					<label class="label">support@happyhomes.com</label>
+				</div>		
+			</div>
+		</div>
+	</main>
+	<footer class="main-footer">
+		<nav>
+			<ul class="main-footer__links">
+				<li class="main-footer__link">
+					<a href="#">Support</a>
+				</li>
+				<li class="main-footer__link">
+					<a href="#">Terms & Conditions</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>

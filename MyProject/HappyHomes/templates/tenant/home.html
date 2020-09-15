@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/shared.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/main.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="page-container">
+	<header class="main-header">
+		<!-- <div>
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
+            <a href="#" class="main-header_brand">HAPPYHOMES</a>
+        </div> -->
+        <a href="#" class="main-header_brand">HAPPYHOMES</a>
+		<nav class="main-nav">
+			<ul class="main-nav_items ">
+				<li class="main-nav_item">
+					<a href="/HappyHomes/pg_hostel_showall/">PG/Hostel</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/contact_us/">Contact Us</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/profile/?email={{ request.session.email }}">My Profile<i class="fa fa-user fa-fw"></i></a>
+				</li>
+				<li class="main-nav_item main-nav_item--login">
+					<a href="#">Logout</a>					
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- <div class="side-nav-bar">
+		<h3 class="nav-name">HappyHomes</h3>
+		<nav class="nav-items">
+			<ul>
+				<li class="nav-item">
+					<a href="#"></i>PG/Hostel</a>
+				</li>
+				<li class="nav-item">
+					<a href="#"></i>PG/Hostel</a>
+				</li>
+				<li class="nav-item">
+					<a href="#"></i>Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+	</div> -->
+	<main>
+		<div class="city">
+		</div>
+		<div class="container">
+			<section class="heading">
+				<h1>Explore Hostel Here</h1>
+				<a href="/HappyHomes/pg_hostel_showall/">Show All</a>
+			</section>
+			<section id="items">
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_one.jpg' %}" alt="Maninagar" class="hover-shadow">
+					<h3><a href="">Maninagar</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_two.jpg' %}" alt="SG Highway" class="hover-shadow">
+					<h3><a href="">SG Highway</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_three.jpg' %}" alt="Law Garden" class="hover-shadow">
+					<h3><a href="">Law Garden</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_two.jpg' %}" alt="Shivranjani" class="hover-shadow">
+					<h3><a href="">Shivranjani</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_one.jpg' %}" alt="CG Road" class="hover-shadow">
+					<h3><a href="">CG Road</a></h3>
+				</div>
+			</section>
+		</div>
+		<div class="container">
+			<section class="heading">
+				<h1>Explore PG Here</h1>
+				<a href="/HappyHomes/pg_hostel_showall/">Show All</a>
+			</section>
+			<section id="items">
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_one.jpg' %}" alt="Maninagar" class="hover-shadow">
+					<h3><a href="">Maninagar</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_two.jpg' %}" alt="SG Highway" class="hover-shadow">
+					<h3><a href="">SG Highway</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_three.jpg' %}" alt="Law Garden" class="hover-shadow">
+					<h3><a href="">Law Garden</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_two.jpg' %}" alt="Shivranjani" class="hover-shadow">
+					<h3><a href="">Shivranjani</a></h3>
+				</div>
+				<div class="blocks">
+					<img src="{% static 'tenant/bed_one.jpg' %}" alt="CG Road" class="hover-shadow">
+					<h3><a href="">CG Road</a></h3>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="main-footer">
+		<nav>
+			<ul class="main-footer__links">
+				<li class="main-footer__link">
+					<a href="#">Support</a>
+				</li>
+				<li class="main-footer__link">
+					<a href="#">Terms & Conditions</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>

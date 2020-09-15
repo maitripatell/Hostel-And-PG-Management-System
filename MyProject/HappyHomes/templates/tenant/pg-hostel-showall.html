@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/shared.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/main.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="page-container">
+	<header class="main-header">
+		<div>
+			<a href="/HappyHomes/index/" class="main-header_brand">HAPPYHOMES</a>
+		</div><nav class="main-nav">
+			<ul class="main-nav_items ">
+				<li class="main-nav_item">
+					<a href="/HappyHomes/pg_hostel_showall/">PG/Hostel</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/contact_us/">Contact Us</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/profile/?email={{ request.session.email }}">My Profile<i class="fa fa-user fa-fw"></i></a>
+				</li>
+				<li class="main-nav_item main-nav_item--login">
+					<a href="#">Logout</a>					
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="city">
+		</div>
+		<div class="container">
+			<div class="heading">
+				<h1>PG & Hostels</h1>
+			</div>
+			<div>
+				{% for key, value_list in residenceDict.items %}
+					{% for value in value_list %}
+				<section class="pg-hostel-showall">
+		            <div class="pg-hostel-showall__image-container">
+		        	    <img src="{% static 'tenant/bed_one.jpg' %}" alt="Maninagar" class="pg-hostel-showall__image hover-shadow">
+		            </div>
+		            <div class="pg-hostel-showall__info">
+		                <h1>
+		            		<a href="/HappyHomes/pg_hostel/?id={{ value.id }}"  class="pg-hostel-showall__name">{{ value.residence_name }}</a>
+		                </h1>
+		                <h2 class="pg-hostel-showall__address">{{ value.residence_address}}</h2>
+		                <h2 class="pg-hostel-showall__address">{{ value.residence_city}}</h2>
+		                <h2 class="pg-hostel-showall__address">{{ value.residence_pincode}}</h2>
+		            </div>			      
+				</section>
+					{% endfor %}
+				{% endfor %}
+			</div>
+		</div>
+	</main>
+	<footer class="main-footer">
+		<nav>
+			<ul class="main-footer__links">
+				<li class="main-footer__link">
+					<a href="#">Support</a>
+				</li>
+				<li class="main-footer__link">
+					<a href="#">Terms & Conditions</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>

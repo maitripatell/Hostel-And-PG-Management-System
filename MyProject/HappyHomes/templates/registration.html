@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes || SIGNUP</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body class="body">
+<main>
+	<div class="form-reg">
+		<div class="heading">
+			<h1>SIGN UP</h1>
+		</div>
+		<div class="container-reg">
+			<form action="/HappyHomes/reg/" method="POST" class="form-design">{% csrf_token %}
+			
+			    <input type="radio" name="type" value="Owner" class="radio"/>
+			    <label for="owner" class="label">Owner</label>
+			    <input type="radio" name="type" value="Tenant" class="radio"/>
+			    <label for="tenant" class="label">Tenant</label>
+				<br>
+
+				<input type="text" name="dob" placeholder="DOB: YYYY-MM-DD">
+				<br>
+
+				<input type="text" name="email" placeholder="Email">
+				<br>
+				
+				<input type="password" name="password" placeholder="Password">
+				<br>
+				
+				<input type="password" name="password" placeholder="Confirm Password">
+				<br>
+				<input type="submit" name="submit">
+			</form>
+		</div>
+	</div>
+</main>
+</body>
+</html>

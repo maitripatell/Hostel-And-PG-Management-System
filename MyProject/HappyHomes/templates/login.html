@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes || SIGNIN FORM</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body class="body">
+<main>
+	<div class="form">
+		<div class="heading">
+			<h1>SIGN IN</h1>
+		</div>
+		<div class="container">
+			<form action="/HappyHomes/logincheck/" method="POST" class="form-design">{% csrf_token %}
+				<input type="text" name="email" placeholder="maitri@gmail.com">
+				<br>
+				<input type="password" name="password" placeholder="**********">
+				<br>
+				<a href="/registration/" id="forget_pwd">Forget Password?</a>
+				</br>
+				<input type="submit" name="submit">
+				</br>
+				<label id="reg">Don't have an account? <a href="/HappyHomes/registration/"><u>Click Here</u></a></label>
+			</form>
+		</div>
+	</div>
+</main>
+</body>
+</html>

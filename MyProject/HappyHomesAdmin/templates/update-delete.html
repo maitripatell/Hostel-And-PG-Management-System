@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes || Admin</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'shared.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+<div id="page-container">
+	<header>
+		<div class="main-header">
+			<a href="#" class="main-header_brand">Administrator</a>
+			<nav class="main-nav">
+				<ul class="main-nav_items">
+					<li class="main-nav_item">
+						<a href="/HappyHomesAdmin/profile/"><i class='fas fa-bell icon'></i>Notifications</a>
+					</li>
+					<li class="main-nav_item">
+						<a href="/HappyHomesAdmin/profile/"><i class='fas fa-user icon'></i>Profile</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="side-nav-bar">
+			<h3 class="nav-name">HappyHomes</h3>
+			<nav class="nav-items">
+				<ul>
+					<li class="nav-item">
+						<a href="/HappyHomesAdmin/index/"><i class='fas fa-align-justify icon'></i>Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a href="/HappyHomesAdmin/addnew/"><i class='fas fa-plus icon'></i>Add New</a>
+					</li>
+					<li class="nav-item">
+						<a href="#"><i class='far fa-edit icon'></i>Edit</a>
+					</li>
+					<li class="nav-item">
+						<a href="/HappyHomesAdmin/view_all/"><i class='far fa-eye icon'></i>View All</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+	<main>
+		<div class="container">
+			<div id="search-tab">
+				<button><i class="fa fa-search"></i></button><input type="search" name="search" placeholder="Search"></label>
+			</div>
+			<table class="grid-table_edit">
+				<tr>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Description</th>
+					<th>Rent</th>
+					<th>Facility</th>
+					<th>Residence Type</th>
+					<th>Image</th>
+					<th>+</th>
+				</tr>
+				<tr>
+					<td>Kush Hostel Facility</td>
+					<td>7/b Shri Sahajanand Society, Near Nilkanth Nagar, Kankaria, Ahmedabad-898778</td>
+					<td>Our Hostel is located in the middle-east area of motera city. Besides there are many popular places to visit like park, malls and many more.</td>
+					<td>5000</td>
+					<td>Laundary</td>
+					<td>Hostel</td>
+					<td><img src="{% static 'bed_one.jpg' %}" alt="SG Highway" class="table-image"></td>
+					<td><i class='far fa-edit icon'></i><i class='far fa-trash-alt icon'></i></td>
+				</tr>
+				<tr>
+					<td>Sahajanand PG and Food Facility</td>
+					<td>46, Rukshamni Bunglows, Near Kankaria, Opposite Best High School, Maninagar, Ahmedabad-898778</td>
+					<td>Our PG is one of the top and popular PG in Ahmedabad city. It provides various facilities like breakfast, lunch, dinner, laundary. There are also AC and Non-AC rooms available as per the requirement.</td>
+					<td>5000</td>
+					<td>Food and Laundary</td>
+					<td>PG</td>
+					<td><img src="{% static 'bed_two.jpg' %}" alt="SG Highway" class="table-image"></td>
+					<td><i class='far fa-edit icon'></i><i class='far fa-trash-alt icon'></i></td>
+				</tr>
+			</table>
+		</div>
+	</main>
+</div>
+</body>
+</html>

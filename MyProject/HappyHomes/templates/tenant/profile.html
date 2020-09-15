@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/shared.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'tenant/main.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="page-container">
+	<header class="main-header">
+		<div>
+			<a href="/HappyHomes/index/" class="main-header_brand">HAPPYHOMES</a>
+		</div><nav class="main-nav">
+			<ul class="main-nav_items ">
+				<li class="main-nav_item">
+					<a href="/HappyHomes/pg_hostel_showall/">PG/Hostel</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/contact_us/">Contact Us</a>
+				</li>
+				<li class="main-nav_item">
+					<a href="/HappyHomes/profile/?email={{ request.session.email }}">My Profile<i class="fa fa-user fa-fw"></i></a>
+				</li>
+				<li class="main-nav_item main-nav_item--login">
+					<a href="#">Logout</a>					
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="city">
+		</div>
+		<div class="container">
+			<section class="heading">
+				<h1>My Profile</h1>
+				<a href="/HappyHomes/edit_profile/?email={{ request.session.email }}">Edit Profile</a>
+			</section>
+			<div class="profile-container">
+				<div>
+					<div>
+						<h2>Personal Info</h2>
+					</div>
+					<div>
+						<label class="label">Name: </label><label class="label">Maitri Patel</label>
+					</div>
+					<div>
+						<label class="label">Address:</label><label class="label">7/B Shridhar Soc, Near Little Star School, Kankaria </label>
+					</div>
+					<div>
+						<label class="label">City:</label><label class="label">Ahmedabad</label>
+					</div>
+					<div>
+						<label class="label">State:</label><label class="label">Gujarat</label>
+					</div>
+					<div>
+						<label class="label">Pincode:</label><label class="label">809774</label>
+					</div>
+					<div>
+						<label class="label">Gender:</label><label class="label">Female</label>
+					</div>
+					<div>
+						<label class="label">Status:</label><label class="label">Active</label>
+					</div>
+					<div>
+						<label class="label">Email:</label><label class="label">{{ request.session.email }}</label>
+					</div>
+					<div>
+						<label class="label">Password:</label><label class="label">*********</label>
+					</div>
+				</div>
+				
+				<!-- <div>
+					<input type="submit" name="submit" value="Submit" class="book-now hover">
+				</div> -->
+				<div>
+					<div>
+						<h2>Other Info</h2>
+					</div>
+					<div>
+						<label class="label">Company Name:</label><label class="label">Infosys</label>
+					</div>
+					<div>
+						<label class="label">Company Address:</label><label class="label">11-A Krupa Residency, Near Little Star School, Kankaria </label>
+					</div>
+					<div>
+						<label class="label">City:</label><label class="label">Ahmedabad </label>
+					</div>
+					<div>
+						<label class="label">State:</label><label class="label">Gujarat </label>
+					</div>
+					<div>
+						<label class="label">Pincode:</label><label class="label">765445 </label>
+					</div>
+					<!-- <div>
+						<label class="label">Gender: </label><label class="label">Female </label>
+					</div>
+					<div>
+						<label class="label">Status: </label><label class="label">Active </label>
+					</div>
+					<div>
+						<label class="label">Password: </label><label class="label">abc@123456xyz </label>
+					</div> -->
+				</div>
+					<!-- <div>
+						<input type="submit" name="submit" value="Submit" class="book-now hover">
+					</div> -->
+										
+			</div>
+		</div>
+	</main>
+	<footer class="main-footer">
+		<nav>
+			<ul class="main-footer__links">
+				<li class="main-footer__link">
+					<a href="#">Support</a>
+				</li>
+				<li class="main-footer__link">
+					<a href="#">Terms & Conditions</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+</body>
+</html>

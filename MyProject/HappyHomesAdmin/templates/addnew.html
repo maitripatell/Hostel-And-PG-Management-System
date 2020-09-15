@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HappyHomes || Admin</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'shared.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+<div id="page-container">
+	<header>
+		<div class="main-header">
+			<a href="#" class="main-header_brand">Administrator</a>
+			<nav class="main-nav">
+				<ul class="main-nav_items">
+					<li class="main-nav_item">
+						<a href="/HappyHomesAdmin/profile/"><i class='fas fa-bell icon'></i>Notifications</a>
+					</li>
+					<li class="main-nav_item">
+						<a href="/HappyHomesAdmin/profile/"><i class='fas fa-user icon'></i>Profile</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="side-nav-bar">
+			<h3 class="nav-name">HappyHomes</h3>
+			<nav class="nav-items">
+				<ul>
+					<li class="nav-item">
+						<a href="/HappyHomesAdmin/index/"><i class='fas fa-align-justify icon'></i>Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a href="#"><i class='fas fa-plus icon'></i>Add New</a>
+					</li>
+					<li class="nav-item">
+						<a href="/HappyHomesAdmin/editable/"><i class='far fa-edit icon'></i>Edit</a>
+					</li>
+					<li class="nav-item">
+						<a href="/HappyHomesAdmin/view_all/"><i class='far fa-eye icon'></i>View All</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<form action="/HappyHomesAdmin/add_data/" method="GET" class="grid-form">
+				<div class="form-items column-combine">
+					<label>Add Here</label>
+				</div>
+				<div class="form-items">
+					<label>Name:</label>
+				</div>
+				<div class="form-items">
+					<input type="text" name="name">
+				</div>
+				<div class="form-items">
+					<label>Address: </label>
+				</div>
+				<div class="form-items">
+					<textarea type="text" name="address"></textarea>
+				</div>
+				<div class="form-items">
+					<label>City:</label>
+				</div>
+				<div class="form-items">
+					<input type="text" name="city">
+				</div>
+				<div class="form-items">
+					<label>State: </label>
+				</div>
+				<div class="form-items">
+					<input type="text" name="state">
+				</div>
+				<div class="form-items">
+					<label>Pin-code:</label>
+				</div>
+				<div class="form-items">
+					<input type="text" name="pincode">
+				</div>
+				<div class="form-items">
+					<label>Description: </label>
+				</div>
+				<div class="form-items">
+					<textarea type="text" name="description"></textarea>
+				</div>
+				<div class="form-items">
+					<label>Rent:</label>
+				</div>
+				<div class="form-items">
+					<input type="text" name="rent">
+				</div>
+				<div class="form-items">
+					<label>Facility: </label>
+				</div>
+				<div class="form-items">
+					<input type="text" name="facility">
+				</div>
+				<div class="form-items">
+					<label>Residence Type: </label>
+				</div>
+				<div class="form-items">
+					<select name="residence-type">
+					    <option value="PG">PG</option>
+					    <option value="Hostel">Hostel</option>
+					</select>
+				</div>
+				<div class="form-items">
+					<label>Image: </label>
+				</div>
+				<div class="form-items">
+					<input type="file" name="image">
+				</div>
+				<div class="form-items column-combine">
+					<a href=""><input type="submit" name="submit" value="Submit" class="submit-button"></a>
+				</div>
+			</form>
+		</div>
+	</main>
+</div>
+</body>
+</html>
